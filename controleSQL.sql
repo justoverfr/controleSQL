@@ -27,7 +27,8 @@ INSERT INTO `films_categs` (`id_film`, `id_categorie`) VALUES
 -- tous les champs du film 43, et tous les champs des utilisateurs ayant mis ces commentaires
 SELECT c.commentaire, f.*, u.* FROM `commentaire` AS c
 INNER JOIN film AS f ON c.id_film = f.id
-INNER JOIN user AS u ON c.id_user = u.id;
+INNER JOIN user AS u ON c.id_user = u.id
+WHERE c.id_film = 43;
 
 -- 5]
 -- -Supprimez le film dont le slug commence par "t"
